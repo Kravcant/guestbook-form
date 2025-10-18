@@ -6,7 +6,9 @@ body {
 
 main {
     background-color: white;
-    padding: 1px 10px;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 0.25rem grey;
+    padding: 1px 10px 10px 10px;
     margin: 20px 40px;
 }
 
@@ -18,7 +20,7 @@ fieldset {
     border: none;
 }
 
-#textboxDiv {
+#topField {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -29,8 +31,39 @@ div {
     padding: 10px;
 }
 
-input[type="text"], textarea, select{
+input[type="text"], textarea, select {
     border: 1px solid rgb(230, 230, 230);
     border-radius: 0.25rem;
     padding: 10px;
+}
+
+#bottomField {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.message {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+textarea {
+    height: 100px;
+}
+
+section {
+    display: flex;
+}
+
+section label {
+    align-content: center;
+}
+
+button {
+    background-color: forestgreen;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 10px 20px;
+    margin-left: 12px;
 }
