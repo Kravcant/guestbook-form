@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
     <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="icon" href="images/phone.jpg">
 </head>
 <body>
     <main>
         <h1>Contact Form</h1>
         <form>
-            <fieldset id="textboxDiv">
+            <fieldset id="topField">
                 <!-- First Name -->
                 <div>
                     <label for="fname">First Name</label>
@@ -42,34 +43,43 @@
                     <input type="text" id="email" name="email">
                 </div>
             </fieldset>
-            <fieldset>
+            <fieldset id="bottomField">
                 <!-- How did we meet? -->
-                <label for="meet">How did we meet?</label>
-                <select id="meet" name="meet">
-                    <option value="default">Please select...</option>
-                </select>
+                <div>
+                    <label for="meet">How did we meet?</label>
+                    <select id="meet" name="meet">
+                        <option value="default">Please select...</option>
+                    </select>
+                </div>
                 <!-- Other -->
-                <label for="other">Other (Please specify)</label>
-                <input type="text" id="other" name="other">
+                <div>
+                    <label for="other">Other (Please specify)</label>
+                    <input type="text" id="other" name="other">
+                </div>
 
                 <!-- Message -->
-                <label for="message">Message</label>
-                <input type="text" id="message" name="message">
-
+                <div class="message">
+                    <label for="message">Message</label>
+                    <textarea rows="5" id="message" name="message"></textarea>
+                </div>
+                </fieldset>
+                <fieldset>
                 <!-- Add to mailing list -->
                 <label for="mailing">
                     <input type="checkbox" id="mailing" name="method[]" value="mailing">
                     Please add me to your mailing list
                 </label>
-                <p class="format">Choose an email format:</p>
-                <label for="html">
-                    <input type="radio" id="html" name="method" value="html">
-                    HTML
-                </label>
-                <label for="text">
-                    <input type="radio" id="text" name="method" value="text">
-                    Text
-                </label>
+                <section>
+                    <p class="format">Choose an email format:</p>
+                    <label for="html">
+                        <input type="radio" id="html" name="method" value="html">
+                        HTML
+                    </label>
+                    <label for="text">
+                        <input type="radio" id="text" name="method" value="text">
+                        Text
+                    </label>
+                </section>
             </fieldset>
             <button type="submit">Submit</button>
         </form>
