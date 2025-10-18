@@ -67,3 +67,18 @@ button {
     padding: 10px 20px;
     margin-left: 12px;
 }
+
+#link {
+    font-weight: normal;
+    text-align: center;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: blue;
+}
