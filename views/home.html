@@ -7,57 +7,72 @@
     <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
-    <h1>Contact Form</h1>
-    <form>
-        <fieldset>
-            <!-- First Name -->
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname">
-            <!-- Last Name -->
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname">
-            <!-- Job Title -->
-            <label for="job">Job Title</label>
-            <input type="text" id="job" name="job">
-            <!-- Company -->
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company">
-            <!-- LinkedIn URL -->
-            <label for="linkedin">LinkedIn URL</label>
-            <input type="text" id="linkedin" name="linkedin">
-            <!-- Email Address -->
-            <label for="email">Email Address</label>
-            <input type="text" id="email" name="email">
+    <main>
+        <h1>Contact Form</h1>
+        <form>
+            <fieldset id="textboxDiv">
+                <!-- First Name -->
+                <div>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname">
+                </div>
+                <!-- Last Name -->
+                <div>
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname">
+                </div>
+                <!-- Job Title -->
+                <div>
+                    <label for="job">Job Title</label>
+                    <input type="text" id="job" name="job">
+                </div>
+                <!-- Company -->
+                <div>
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <!-- LinkedIn URL -->
+                <div>
+                    <label for="linkedin">LinkedIn URL</label>
+                    <input type="text" id="linkedin" name="linkedin">
+                </div>
+                <!-- Email Address -->
+                <div>
+                    <label for="email">Email Address</label>
+                    <input type="text" id="email" name="email">
+                </div>
+            </fieldset>
+            <fieldset>
+                <!-- How did we meet? -->
+                <label for="meet">How did we meet?</label>
+                <select id="meet" name="meet">
+                    <option value="default">Please select...</option>
+                </select>
+                <!-- Other -->
+                <label for="other">Other (Please specify)</label>
+                <input type="text" id="other" name="other">
 
-            <!-- How did we meet? -->
-            <label for="meet">How did we meet?</label>
-            <select id="meet" name="meet">
-                <option value="default">Please select...</option>
-            </select>
-            <!-- Other -->
-            <label for="other">Other (Please specify)</label>
-            <input type="text" id="other" name="other">
+                <!-- Message -->
+                <label for="message">Message</label>
+                <input type="text" id="message" name="message">
 
-            <!-- Message -->
-            <label for="message">Message</label>
-            <input type="text" id="message" name="message">
-
-            <!-- Add to mailing list -->
-            <label for="mailing">
-                <input type="checkbox" id="mailing" name="method[]" value="mailing">
-                Please add me to your mailing list
-            </label>
-            <p class="format">Choose an email format:</p>
-            <label for="html">
-                <input type="radio" id="html" name="method" value="html">
-                HTML
-            </label>
-            <label for="text">
-                <input type="radio" id="text" name="method" value="text">
-                Text
-            </label>
-        </fieldset>
-        <button type="submit">Submit</button>
-    </form>
+                <!-- Add to mailing list -->
+                <label for="mailing">
+                    <input type="checkbox" id="mailing" name="method[]" value="mailing">
+                    Please add me to your mailing list
+                </label>
+                <p class="format">Choose an email format:</p>
+                <label for="html">
+                    <input type="radio" id="html" name="method" value="html">
+                    HTML
+                </label>
+                <label for="text">
+                    <input type="radio" id="text" name="method" value="text">
+                    Text
+                </label>
+            </fieldset>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
 </body>
 </html>
