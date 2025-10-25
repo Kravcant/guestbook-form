@@ -37,6 +37,11 @@ input[type="text"], textarea, select {
     padding: 10px;
 }
 
+span {
+    display: none;
+    color: red;
+}
+
 #bottomField {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -57,6 +62,10 @@ section {
 
 section label {
     align-content: center;
+}
+
+#format {
+    display: none;
 }
 
 button {
