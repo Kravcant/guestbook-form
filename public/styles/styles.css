@@ -47,6 +47,10 @@ span {
     grid-template-columns: 1fr 1fr;
 }
 
+#other-text {
+    display: none;
+}
+
 .message {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -57,15 +61,11 @@ textarea {
 }
 
 section {
-    display: flex;
+    display: none;
 }
 
 section label {
     align-content: center;
-}
-
-#format {
-    display: none;
 }
 
 button {
