@@ -38,6 +38,11 @@ input[type="text"], textarea, select {
 }
 
 span {
+    display: block;
+    color: black;
+}
+
+.error {
     display: none;
     color: red;
 }

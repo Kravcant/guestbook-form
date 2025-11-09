@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
     <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="styles/nav.css">
     <link rel="icon" href="images/phone.jpg">
     <script src="/js/script.js" defer></script>
 </head>
 <body>
     <main>
         <h1>Contact Form</h1>
-        <form id="contactForm" action="submit" method="post">
+        <form id="contactForm" action="/submit" method="post">
             <fieldset id="topField">
                 <!-- First Name -->
                 <div>
@@ -78,7 +79,7 @@
                 <fieldset>
                 <!-- Add to mailing list -->
                 <label for="mailing">
-                    <input type="checkbox" id="mailing" name="method[]" value="mailing">
+                    <input type="checkbox" id="mailing" name="mailing" value="yes">
                     Please add me to your mailing list
                 </label>
                 <section>
@@ -92,10 +93,17 @@
                         Text
                     </label>
                 </section>
+                <span id="err-format" class="error">Please select an option</span>
             </fieldset>
             <button type="submit">Submit</button>
         </form>
     </main>
-    <p id="link"><a href="https://github.com/Kravcant/guestbook-form">https://github.com/Kravcant/guestbook-form</a></p>
+    <div id="nav">
+        <p class="link"><a href="/">Home</a></p>
+        <p class="link"><a href="/contact">Contact</a></p>
+        <p class="link"><a href="/admin">Admin</a></p>
+        <p class="link"><a href="https://github.com/Kravcant/guestbook-form">GitHub</a></p>
+        <p class="link"><a href="https://www.linkedin.com/in/anthony-kravchishin-4a5b7b307/">LinkedIn</a></p>
+    </div>
 </body>
 </html>

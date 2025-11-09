@@ -1,0 +1,91 @@
+body {
+    padding: 0 100px;
+    font-size: medium;
+    background-color: rgb(196, 233, 248);
+}
+
+#top {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: xx-large;
+    text-decoration: underline;
+}
+
+img {
+    border-style: solid;
+}
+
+section {
+    display: block;
+    border-style: solid;
+    border-color: goldenrod;
+    background-color: rgb(232, 232, 232);
+    padding: 10px;
+    margin: 10px 0;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: green;
+}
+
+#info, #education {
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+}
+
+#education {
+    height: 30px;
+}
+
+#courses {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#experience {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+li {
+    list-style: square;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    #info {
+        margin: 20px 0;
+        font-size: 90%;
+    }
+
+    #education {
+        margin-bottom: 40px;
+    }
+
+    #courses {
+        padding-left: 5px;
+        list-style: none;
+        font-size: small;
+    }
+}

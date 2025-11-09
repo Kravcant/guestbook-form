@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css">
+    <link rel="icon" href="images/phone.jpg">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+	<script src="//cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
+</head>
+<body>
+    <main>
+        <h1>Admin</h1>
+        <table id="form-table" class="display">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Job</th>
+                    <th>Company</th>
+                    <th>LinkedIn</th>
+                    <th>Email</th>
+                    <th>How did we meet?</th>
+                    <th>Other (if selected)</th>
+                    <th>Message</th>
+                    <th>Mailing?</th>
+                    <th>Mailing format</th>
+                    <th>Date/Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% forms.forEach(form => { %>
+                    <tr>
+                        <td><%= form.fname %> <%= form.lname %></td>
+                        <td><%= form.job %></td>
+                        <td><%= form.company %></td>
+                        <td><%= form.linkedin %></td>
+                        <td><%= form.email %></td>
+                        <td><%= form.meet %></td>
+                        <td><%= form.other %></td>
+                        <td><%= form.message %></td>
+                        <td><%= form.mailing %></td>
+                        <td><%= form.format %></td>
+                        <td><%= form.dateTime %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+	    </table>
+    </main>
+    <div id="nav">
+        <p class="link"><a href="/">Home</a></p>
+        <p class="link"><a href="/contact">Contact</a></p>
+        <p class="link"><a href="/admin">Admin</a></p>
+        <p class="link"><a href="https://github.com/Kravcant/guestbook-form">GitHub</a></p>
+        <p class="link"><a href="https://www.linkedin.com/in/anthony-kravchishin-4a5b7b307/">LinkedIn</a></p>
+    </div>
+    <script defer>
+	    let table = new DataTable('#form-table');
+	</script>
+</body>
+</html>

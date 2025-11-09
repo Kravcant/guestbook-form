@@ -47,6 +47,12 @@ document.getElementById('contactForm').onsubmit = () => {
 		isValid = false;
     }
 
+    let format = document.querySelector('input[name="method"]:checked');
+    if (mail.checked && !format) {
+        document.getElementById('err-format').style.display = "block";
+		isValid = false;
+    }
+
     // Submits form if all conditions have been met
     return isValid;
 }
@@ -64,6 +70,7 @@ document.getElementById('mailing').addEventListener('change', function() {
         document.querySelector('section').style.display = "flex";
     } else {
         document.querySelector('section').style.display = "none";
+        document.getElementById('err-format').style.display = "none";
     }
 });
 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="icon" href="images/phone.jpg">
+    <script src="/js/script.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>Thank you for your submission</h1>
+        <h2>Your submission:</h2>
+        <p>Name: <%= form.fname %> <%= form.lname %></p>
+        <p>Job: <%= form.job %></p>
+        <p>Company: <%= form.company %></p>
+        <p>LinkedIn: <%= form.linkedin %></p>
+        <p>Email: <%= form.email %></p>
+        <% if (form.meet != 'other') { %>
+            <p>How did we meet: <%= form.meet %></p>
+        <% } else { %>
+            <p>How did we meet: <%= form.other %></p>
+        <% } %>
+        <p>Message: <%= form.message %></p>
+        <% if (form.mailing) { %>
+            <p>Mailing: <%= form.format %></p>
+        <% } else { %>
+            <p>Mailing: none</p>
+        <% } %>
+        <p>Time submitted: <%= form.dateTime %></p>
+
+        <form action="/" method="get">
+            <button id="submit-button" type="submit">Return to form</button>
+        </form>
+    </main>
+    <div id="nav">
+        <p class="link"><a href="/">Home</a></p>
+        <p class="link"><a href="/contact">Contact</a></p>
+        <p class="link"><a href="/admin">Admin</a></p>
+        <p class="link"><a href="https://github.com/Kravcant/guestbook-form">GitHub</a></p>
+        <p class="link"><a href="https://www.linkedin.com/in/anthony-kravchishin-4a5b7b307/">LinkedIn</a></p>
+    </div>
+</body>
+</html>
