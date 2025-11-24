@@ -119,7 +119,7 @@ app.post('/submit', async(req, res) => {
             form.other,
             form.message,
             form.mailing === "1" ? 1 : 0,
-            form.method,
+            form.method ?? "",
             form.dateTime
         ];
         console.log("SQL params:", params);

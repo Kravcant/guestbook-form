@@ -96,3 +96,8 @@ a:hover {
     text-decoration: underline;
     color: blue;
 }
+
+td {
+    max-width: 120px;
+    overflow-wrap: break-word;
+}
